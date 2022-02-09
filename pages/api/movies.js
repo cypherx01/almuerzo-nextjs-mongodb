@@ -11,7 +11,7 @@ export default async function handler(req, res) {
     .collection("users")
     .find({})
     .sort({ metacritic: -1 })
-    //.limit(20)
+    .limit(10)
     .toArray();
 
     res.json(movies);
