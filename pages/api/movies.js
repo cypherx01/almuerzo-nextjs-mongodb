@@ -8,7 +8,7 @@ export default async function handler(req, res) {
   const db = client.db("sample_mflix"); // Nombre de la base de datos
 
   const movies = await db
-    .collection("users")
+    .collection("movies")
     .find({})
     .sort({ metacritic: -1 })
     .limit(10)
